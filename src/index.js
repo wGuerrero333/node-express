@@ -26,6 +26,5 @@ app.use(indexRouters)
 app.use(express.static(join (__dirname, 'public') ))
 // en el navegar se puede acceder al main.css asi: http://localhost:3000/main.css
 
-const puerto = 3000
-app.listen(puerto)
-console.log("Escucha por" , puerto)
+app.listen( process.env.PORT || 3000)
+console.log("Escucha por" ,process.env.PORT || 3000)
