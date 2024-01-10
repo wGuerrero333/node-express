@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include('partials/styles.ejs') %>
+    <title>Plantilla html5 <%= titulo %></title>
+</head>
+<body>
+    <%- include("partials/navigation") %>
+    <!-- Se importa la funcionallidad de despligue de barra de Nav  -->
+
+    <!-- Este script viene de la pagina de Boostrap https://getbootstrap.com/docs/5.3/getting-started/introduction/ -->
+    
+    <%- include("partials/despliegueNav") %>
+
+
+
+     <!-- <h1>Plantilla INICIO HTML5 INDEX</h1> -->
+    <header class="container vh-100 d-flex justify-content-center align-items-center">
+     <!-- con la variable  __dirname usada en  index.js esta ruta lleva hasta /public solo habia que agregarle /fazt.png -->
+     <div class="d-flex flex-column justify-content-center align-items-center">
+        <img src="/fazt.png" alt="img" 
+        class="w-25 bg-white" >
+        <h1 class="display-1" >Abby</h1>
+        <a href="/about" class="btn btn-primary w-25"> ABOUT </a>
+
+    </header>
+     </div>  
+ 
+    
+    <p class="display-5"><%= variable %></p> 
+</body>
+</html>

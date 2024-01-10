@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- Esta inyecta estilos CSS en el HEAD del HTML -->
+    <%-include('partials/styles.ejs') %>
+
+
+</head>
+<body>
+    <%- include("partials/navigation") %>
+    
+
+    <main class="vh-100 container pt-2 text-center d-flex flex-column justify-content-center ">
+        <h1>Plantilla about</h1>
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed quidem pariatur architecto exercitationem cumque dolore impedit repellendus labore minima eaque commodi dolores beatae enim praesentium accusantium expedita perferendis recusandae, molestiae saepe placeat. Vero quibusdam sed quis autem explicabo! Libero mollitia repellendus voluptate eos, nulla pariatur provident debitis perspiciatis aperiam accusamus.</p>
+    </main>
+
+    <h1 class="display-5"><%= variable %></h1> 
+    <%- include("partials/footer") %>
+    
+
+</body>
+</html>
