@@ -21,7 +21,7 @@ app.set('view engine', 'ejs')
 
 const poolObjeto = new pg.Pool({
     connectionString:'postgres://djangocruddb_yf1v_user:a17MmMBm9HYf8PPpE5OXEBlsV3hvgYCt@dpg-cm6ravud3nmc73ar9nq0-a/djangocruddb_yf1v',
-    ssl: true
+    // ssl: true
 })
 
 
