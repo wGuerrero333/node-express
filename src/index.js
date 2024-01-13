@@ -1,6 +1,8 @@
 // la forma por defualt es type= jscommon la otra es la forma modular
 // const express = required('express')
 import  express  from "express"
+import pg from 'pg'
+
 // import ejs from "ejs" se importa pero como viene intergado a node no es necesario
 // estas son utiles para encontrar la direccion absoluta de la carpeta views
 import {dirname, join} from 'path';
@@ -17,10 +19,19 @@ app.set('views',join(__dirname,'vistas'))
 // establece el view engine para incorporar ejs  ~~ ( html enriquecido osea .ejs)
 app.set('view engine', 'ejs')
 
+const poolObjeto = new pg.Pool({
+    connectionString:'postgres://djangocruddb_yf1v_user:a17MmMBm9HYf8PPpE5OXEBlsV3hvgYCt@dpg-cm6ravud3nmc73ar9nq0-a/djangocruddb_yf1v',
+    ssl: true
+})
 
 
 // cuando envie una peticion GET importa indexRoutes desde routes y haga la peticion
 app.use(indexRouters)
+
+app.get('/respuestadb', async (req,res) => {
+    const resultado = await poolObjeto.query('SELECT_NOW()')
+    return res.json(resultado.rows[0])
+})
 
 // para ue express le permita usar la carpeta public ~~ static
 app.use(express.static(join (__dirname, 'public') ))
