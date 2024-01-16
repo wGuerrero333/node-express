@@ -9,12 +9,14 @@ import  express  from "express"
 
 import {dirname, join} from 'path';
 import { fileURLToPath} from 'url'
+
 // dotenv detecta las variavles de entorno
 // import {config } from 'dotenv' 
+// config()
+
 
 // pg es un modulo para conectarse a PostgreSQL
 import pg from 'pg'
-config()
 
 import indexRouters from './routes/index.js'
 
