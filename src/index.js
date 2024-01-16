@@ -1,6 +1,8 @@
 // la forma por defualt es type= jscommon la otra es la forma modular
 // const express = required('express')
 import  express  from "express"
+import pg from 'pg'
+
 // import ejs from "ejs" se importa pero como viene intergado a node no es necesario
 // estas son utiles para encontrar la direccion absoluta de la carpeta views
 
@@ -29,7 +31,7 @@ const conexion = new pg.Pool({
 })
 
 
-
+ls
 // forma dinamica de encontar la ruta ABSOLUTA
 const __dirname =  dirname(fileURLToPath(import.meta.url))
 // console.log(__dirname) 
@@ -48,6 +50,11 @@ app.get('/text',(req,res)=>{
 
 // cuando envie una peticion GET importa indexRoutes desde routes y haga la peticion
 app.use(indexRouters)
+
+app.get('/respuestadb', async (req,res) => {
+    const resultado = await poolObjeto.query('SELECT_NOW()')
+    return res.json(resultado.rows[0])
+})
 
 // para ue express le permita usar la carpeta public ~~ static
 app.use(express.static(join (__dirname, 'public') ))
