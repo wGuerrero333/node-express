@@ -10,7 +10,7 @@ import  express  from "express"
 import {dirname, join} from 'path';
 import { fileURLToPath} from 'url'
 // dotenv detecta las variavles de entorno
-import {config } from 'dotenv' 
+// import {config } from 'dotenv' 
 
 // pg es un modulo para conectarse a PostgreSQL
 import pg from 'pg'
