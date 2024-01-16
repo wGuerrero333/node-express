@@ -1,7 +1,7 @@
 // la forma por defualt es type= jscommon la otra es la forma modular
 // const express = required('express')
 import  express  from "express"
-import pg from 'pg'
+
 
 // import ejs from "ejs" se importa pero como viene intergado a node no es necesario
 // estas son utiles para encontrar la direccion absoluta de la carpeta views
