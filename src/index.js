@@ -33,8 +33,8 @@ const conexion = new pg.Pool({
 })
 
 
-ls
-// forma dinamica de encontar la ruta ABSOLUTA
+
+// la forma dinamica de encontar la ruta ABSOLUTA
 const __dirname =  dirname(fileURLToPath(import.meta.url))
 // console.log(__dirname) 
 // join() concatena las rutas sin importar que sean windows o linux es equivalente a
