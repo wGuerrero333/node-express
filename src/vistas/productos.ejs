@@ -10,6 +10,7 @@
 
 </head>
 <body>
+
     <%- include("partials/navigation") %>
     <main>
         <h1>Plantilla productos</h1>
@@ -22,19 +23,21 @@
                 <form action="">
                   <div class="mb-3">
                     <label for="email">Nombre:</label>
-                    <input class="form-control" type="text" placeholder="Nombre" />
+                    <input autocomplete="additional-name" id="nombre" class="form-control" type="text" placeholder="Nombre" />
                   </div>
                   <div class="mb-3">
                     <label for="email">Descripcion:</label>
                     <textarea
+                    id="email"
+                    autocomplete="additional-name"
                       class="form-control"
                       name=""
-                      cols="30"
-                      rows="10"
+                      cols="5"
+                      rows="6"
                       placeholder="Descripcion"
                     ></textarea>
                   </div>
-                  <button class="btn btn-primary btn-block">Save</button>
+                  <button class="btn btn-primary btn-block"  onclick= guardar() >Save</button>
                 </form>
               </div>
             </div>
@@ -42,8 +45,20 @@
     </main>
     
 <%- include("partials/footer") %>
+<script>
+  const guardar = () => {
+console.log("SCRIPT OK")
+  const email = document.querySelector("#email").value;
+  const nombre = document.querySelector('#nombre').value;
+ console.log('name' + nombre)
+ alert('email '+ email)
+ alert('nombre'+ nombre)
+
+  
+  }
+  
+</script>
 
 </body>
-
 
 </html>
