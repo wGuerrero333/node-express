@@ -20,10 +20,11 @@
                 <h3>Producto</h3>
               </div>
               <div class="card-body">
-                <form action="">
+                <form  method="post" >
                   <div class="mb-3">
                     <label for="email">Nombre:</label>
-                    <input autocomplete="additional-name" id="nombre" class="form-control" type="text" placeholder="Nombre" />
+                    <!-- EL name sirve de identificador en el .ejs no el id -->
+                    <input autocomplete="additional-name" name="nombre" id="nombre" class="form-control" type="text" placeholder="Nombre" />
                   </div>
                   <div class="mb-3">
                     <label for="email">Descripcion:</label>
@@ -31,7 +32,7 @@
                     id="email"
                     autocomplete="additional-name"
                       class="form-control"
-                      name=""
+                      name="email"
                       cols="5"
                       rows="6"
                       placeholder="Descripcion"
@@ -50,14 +51,13 @@
 console.log("SCRIPT OK")
   const email = document.querySelector("#email").value;
   const nombre = document.querySelector('#nombre').value;
- console.log('name' + nombre)
- alert('email '+ email)
- alert('nombre'+ nombre)
+ console.log( `name: ${nombre}, email ${email} ` )
 
-  
-  }
+
+    }
   
 </script>
+
 
 </body>
 

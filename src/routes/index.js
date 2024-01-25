@@ -8,4 +8,5 @@ router.get("/productos", (req, res) => res.render("productos"))
 router.get("/about", (req, res) => res.render("about",{titulo : "Titulo desde backends" ,variable : "Abby Hot desde Backend"}))
 // router.get("/respuestadb", (req, res) => { await }) .get.. 
 
+
 export default router
